@@ -1,0 +1,43 @@
+﻿mario@macbook:~$ mkdir "Mario Maged"
+mario@macbook:~$ cd "Mario Maged"
+mario@macbook:~/Mario Maged$ mkdir Documents
+mario@macbook:~/Mario Maged$ cd Documents/
+mario@macbook:~/Mario Maged/Documents$ touch file1.txt file2.txt file3.txt
+mario@macbook:~/Mario Maged/Documents$ nano file1.txt
+mario@macbook:~/Mario Maged/Documents$ cat file1.txt
+hello
+mario@macbook:~/Mario Maged/Documents$ cd ..
+mario@macbook:~/Mario Maged$ touch .hidden_file
+mario@macbook:~/Mario Maged$ ls -a
+.  ..  Documents  .hidden_file
+mario@macbook:~/Mario Maged$ cd Documents/
+mario@macbook:~/Mario Maged/Documents$ mkdir "-"
+mario@macbook:~/Mario Maged/Documents$ cd "-"
+/home/mario/Mario Maged
+mario@macbook:~/Mario Maged$ ls
+Documents
+mario@macbook:~/Mario Maged$ cd Documents/
+mario@macbook:~/Mario Maged/Documents$ ls
+-  file1.txt  file2.txt  file3.txt
+mario@macbook:~/Mario Maged/Documents$ mkdir '-'
+mkdir: cannot create directory ‘-’: File exists
+mario@macbook:~/Mario Maged/Documents$ mkdir a-hyphen
+mario@macbook:~/Mario Maged/Documents$ cd a-hyphen
+mario@macbook:~/Mario Maged/Documents/a-hyphen$ cd ..
+mario@macbook:~/Mario Maged/Documents$ cd ..
+mario@macbook:~/Mario Maged$ cp -r Documents my_documents
+mario@macbook:~/Mario Maged$ ls
+Documents  my_documents
+mario@macbook:~/Mario Maged$ cat .hidden_file
+mario@macbook:~/Mario Maged$ cd Documents/
+mario@macbook:~/Mario Maged/Documents$ mv file2.txt /home/mario/"Mario Maged"
+mario@macbook:~/Mario Maged/Documents$ mv file3.txt /home/mario/"Mario Maged"/
+mario@macbook:~/Mario Maged/Documents$ cd ..
+mario@macbook:~/Mario Maged$ ls
+Documents  file2.txt  file3.txt  my_documents
+mario@macbook:~/Mario Maged$ cd ..
+mario@macbook:~$ rm -r "Mario Maged"/
+mario@macbook:~$ ls
+Desktop    Downloads  Music     Public  target.tar  Videos
+Documents  file1.gz   Pictures  snap    Templates
+mario@macbook:~$ 
